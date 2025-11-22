@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Signup</title>
+    <link rel="stylesheet" href="login.css">
+    <script src="login.js"></script>
+
+</head>
+
+<body>
+    <div class="wizard-container">
+        <div class="wizard-header">
+            <h1>Welcome!</h1>
+            <!-- <p>Choose your action to continue</p> -->
+        </div>
+
+        <div class="mode-selector">
+            <button class="mode-btn active" onclick="selectMode('signup')">Sign Up</button>
+            <button class="mode-btn" onclick="selectMode('login')">Login</button>
+        </div>
+
+        <div class="progress-container" id="progressContainer">
+            <div class="progress-steps" id="progressSteps">
+                <!-- updated by JavaScript -->
+            </div>
+        </div>
+
+        <div class="wizard-body">
+            <!-- SIGNUP FLOW -->
+            <div id="signupFlow">
+                <!-- Step 1: Personal Info -->
+                <div class="form-step active" data-step="1">
+                    <h2 class="step-title">Personal Information</h2>
+                    <p class="step-subtitle">Tell us about yourself</p>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name *</label>
+                            <input type="text" id="firstName" placeholder="">
+                            <span class="error-message" id="firstNameError"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name *</label>
+                            <input type="text" id="lastName" placeholder="">
+                            <span class="error-message" id="lastNameError"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="signupEmail">Email Address *</label>
+                        <input type="email" id="signupEmail" placeholder="abc.xyz@example.com">
+                        <span class="error-message" id="signupEmailError"></span>
+                    </div>
+                </div>
+
+                <!-- Step 2: Account Setup -->
+                <div class="form-step" data-step="2">
+                    <h2 class="step-title">Account Setup</h2>
+                    <p class="step-subtitle">Create your credentials</p>
+
+                    <div class="form-group">
+                        <label for="signupPassword">Password *</label>
+                        <input type="password" id="signupPassword" placeholder="Create a strong password">
+                        <span class="error-message" id="signupPasswordError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirmPass">Confirm Password *</label>
+                        <input type="password" id="confirmPass" placeholder="Repeat your password">
+                        <span class="error-message" id="confirmPassError"></span>
+                    </div>
+                </div>
+
+                <!-- Step 3: Confirm -->
+                <div class="form-step" data-step="3">
+                    <h2 class="step-title">Review & Confirm</h2>
+                    <p class="step-subtitle">Check your information</p>
+
+                    <div class="summary-box" id="summaryBox"></div>
+                </div>
+            </div>
+
+            <!-- LOGIN FLOW -->
+            <div id="loginFlow" style="display: none;">
+                <div class="form-step active" data-step="1">
+                    <h2 class="step-title">Welcome Back!</h2>
+                    <p class="step-subtitle">Enter your details to login</p>
+
+                    <div class="form-group">
+                        <label for="loginEmail">Email Address *</label>
+                        <input type="email" id="loginEmail" placeholder="your.email@example.com">
+                        <span class="error-message" id="loginEmailError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="loginPassword">Password *</label>
+                        <input type="password" id="loginPassword" placeholder="Enter your password">
+                        <span class="error-message" id="loginPasswordError"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Success Screen -->
+            <div class="success-screen" id="successScreen">
+                <div class="success-icon">✓</div>
+                <h2 id="successTitle">Success!</h2>
+                <p id="successMessage"></p>
+                <button class="btn btn-next" onclick="location.reload()">Start Again</button>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <div class="wizard-buttons" id="wizardButtons">
+                <button class="btn btn-prev" id="prevBtn" onclick="previousStep()"
+                    style="display: none;">Previous</button>
+                <button class="btn btn-next" id="nextBtn" onclick="nextStep()">Next Step</button>
+                <button class="btn btn-submit" id="submitBtn" onclick="submitForm()"
+                    style="display: none;">Submit</button>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
