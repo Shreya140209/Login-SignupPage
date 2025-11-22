@@ -1,0 +1,266 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Hospital Dashboard — General Hospital</title>
+  <link rel="stylesheet" href="dash.css" />
+</head>
+<body>
+  <div class="top-navbar">
+    <div class="logo-section">
+      <div class="logo">GH</div>
+      <span class="brand-name">General Hospital</span>
+    </div>
+
+    <div class="user-section">
+      <div class="notification-btn" aria-label="Notifications">
+        <span class="bell">🔔</span>
+        <div class="notification-badge">4</div>
+      </div>
+      <div class="user-avatar" title="Admin">AD</div>
+    </div>
+  </div>
+
+  <div class="main-container">
+    <aside class="side-menu" aria-label="Sidebar">
+      <div class="menu-section">
+        <div class="menu-title">Hospital</div>
+
+        <a class="menu-item active" href="#">
+          <span class="menu-icon">🏥</span>
+          <span class="menu-text">Dashboard</span>
+        </a>
+
+        <a class="menu-item" href="#">
+          <span class="menu-icon">🩺</span>
+          <span class="menu-text">Patients</span>
+          <span class="menu-badge">128</span>
+        </a>
+
+        <a class="menu-item" href="#">
+          <span class="menu-icon">📅</span>
+          <span class="menu-text">Appointments</span>
+          <span class="menu-badge">24</span>
+        </a>
+
+        <a class="menu-item" href="#">
+          <span class="menu-icon">👩‍⚕️</span>
+          <span class="menu-text">Doctors</span>
+        </a>
+
+        <a class="menu-item" href="#">
+          <span class="menu-icon">🏨</span>
+          <span class="menu-text">Wards</span>
+        </a>
+
+        <a class="menu-item" href="#">
+          <span class="menu-icon">📋</span>
+          <span class="menu-text">Reports</span>
+        </a>
+      </div>
+
+      <div class="menu-section">
+        <div class="menu-title">Administration</div>
+
+        <a class="menu-item" href="#">
+          <span class="menu-icon">⚙️</span>
+          <span class="menu-text">Settings</span>
+        </a>
+
+        <a class="menu-item" href="#">
+          <span class="menu-icon">🔒</span>
+          <span class="menu-text">Security</span>
+        </a>
+      </div>
+    </aside>
+
+    <main class="main-content" role="main">
+      <header class="content-header">
+        <div>
+          <h1>Welcome back, Admin 👋</h1>
+          <p class="subtle">Overview of hospital operations and patient care today.</p>
+        </div>
+
+        <div class="header-actions">
+          <button class="btn btn-primary">➕ New Patient</button>
+          <button class="btn btn-outline">📅 New Appointment</button>
+        </div>
+      </header>
+
+      <section class="stats-grid" aria-label="Key statistics">
+        <article class="stat-card">
+          <div class="stat-header">
+            <h3>Total Patients</h3>
+            <div class="stat-icon blue">🧑‍🤝‍🧑</div>
+          </div>
+          <div class="stat-value">128</div>
+          <div class="stat-change positive">↑ 6% from last week</div>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-header">
+            <h3>Appointments Today</h3>
+            <div class="stat-icon green">📅</div>
+          </div>
+          <div class="stat-value">24</div>
+          <div class="stat-change neutral">On schedule</div>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-header">
+            <h3>Doctors On Duty</h3>
+            <div class="stat-icon purple">👩‍⚕️</div>
+          </div>
+          <div class="stat-value">18</div>
+          <div class="stat-change positive">3 specialists available</div>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-header">
+            <h3>Bed Occupancy</h3>
+            <div class="stat-icon orange">🛏️</div>
+          </div>
+          <div class="stat-value">72%</div>
+          <div class="stat-change warn">18 beds free</div>
+        </article>
+      </section>
+
+      <section class="content-row">
+        <section class="content-card">
+          <div class="card-header">
+            <h2 class="card-title">Today's Appointments</h2>
+            <span class="view-all">View all →</span>
+          </div>
+
+          <div class="appointment-list">
+            <div class="appointment-item">
+              <div class="appt-time">09:00</div>
+              <div class="appt-details">
+                <div class="appt-name">Ramesh Kumar</div>
+                <div class="appt-meta">Cardiology • Dr. A. Singh</div>
+              </div>
+              <div class="appt-status status-upcoming">Upcoming</div>
+            </div>
+
+            <div class="appointment-item">
+              <div class="appt-time">09:30</div>
+              <div class="appt-details">
+                <div class="appt-name">Sita Devi</div>
+                <div class="appt-meta">General • Dr. N. Patel</div>
+              </div>
+              <div class="appt-status status-inprogress">In Progress</div>
+            </div>
+
+            <div class="appointment-item">
+              <div class="appt-time">10:00</div>
+              <div class="appt-details">
+                <div class="appt-name">Amit Joshi</div>
+                <div class="appt-meta">Orthopedics • Dr. R. Mehta</div>
+              </div>
+              <div class="appt-status status-upcoming">Upcoming</div>
+            </div>
+
+            <div class="appointment-item">
+              <div class="appt-time">10:30</div>
+              <div class="appt-details">
+                <div class="appt-name">Neha Sharma</div>
+                <div class="appt-meta">Pediatrics • Dr. L. Rao</div>
+              </div>
+              <div class="appt-status status-cancelled">Cancelled</div>
+            </div>
+
+            <div class="appointment-item" style="border-bottom: none;">
+              <div class="appt-time">11:00</div>
+              <div class="appt-details">
+                <div class="appt-name">Vikram Singh</div>
+                <div class="appt-meta">ENT • Dr. S. Gupta</div>
+              </div>
+              <div class="appt-status status-upcoming">Upcoming</div>
+            </div>
+          </div>
+        </section>
+
+        <aside class="content-card">
+          <div class="card-header">
+            <h2 class="card-title">Doctor Activity</h2>
+            <span class="view-all">See all →</span>
+          </div>
+
+          <div class="team-grid">
+            <div class="team-member">
+              <div class="member-avatar" style="background: linear-gradient(135deg,#667eea,#764ba2)">AS</div>
+              <div class="member-info">
+                <h4>Dr. A. Singh</h4>
+                <p>Cardiology — 5 patients</p>
+              </div>
+              <div class="member-status status-online" title="On duty"></div>
+            </div>
+
+            <div class="team-member">
+              <div class="member-avatar" style="background: linear-gradient(135deg,#f093fb,#f5576c)">NP</div>
+              <div class="member-info">
+                <h4>Dr. N. Patel</h4>
+                <p>General — 3 patients</p>
+              </div>
+              <div class="member-status status-online" title="On duty"></div>
+            </div>
+
+            <div class="team-member">
+              <div class="member-avatar" style="background: linear-gradient(135deg,#4facfe,#00f2fe)">RM</div>
+              <div class="member-info">
+                <h4>Dr. R. Mehta</h4>
+                <p>Orthopedics — surgery prep</p>
+              </div>
+              <div class="member-status status-away" title="In surgery"></div>
+            </div>
+
+            <div class="team-member" style="border-bottom: none;">
+              <div class="member-avatar" style="background: linear-gradient(135deg,#43e97b,#38f9d7)">LR</div>
+              <div class="member-info">
+                <h4>Dr. L. Rao</h4>
+                <p>Pediatrics — 4 patients</p>
+              </div>
+              <div class="member-status status-online" title="On duty"></div>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="content-card">
+        <div class="card-header">
+          <h2 class="card-title">Ward / Department Summary</h2>
+          <span class="view-all">Manage →</span>
+        </div>
+
+        <div class="ward-grid">
+          <div class="ward">
+            <div class="ward-title">General Ward</div>
+            <div class="ward-sub">Beds: 40 • Occupied: 32</div>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 80%"></div>
+            </div>
+          </div>
+
+          <div class="ward">
+            <div class="ward-title">ICU</div>
+            <div class="ward-sub">Beds: 8 • Occupied: 7</div>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 88%"></div>
+            </div>
+          </div>
+
+          <div class="ward">
+            <div class="ward-title">Maternity</div>
+            <div class="ward-sub">Beds: 12 • Occupied: 8</div>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 66%"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
