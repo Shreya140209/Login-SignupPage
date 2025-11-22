@@ -58,6 +58,82 @@ Change colors in `login.css`:
 4. Push to branch (`git push origin feature/NewFeature`)
 5. Open a Pull Request
 
+Features
+
+Dashboard Summary Cards
+
+Total Patients
+
+Doctors Available
+
+Appointments Today
+
+Bed Occupancy
+
+Responsive Design
+
+Grid layout for stats
+
+Clean table design
+
+Works on desktop & tablet
+
+Department Overview
+
+Emergency
+
+Cardiology
+
+Neurology
+
+Pediatrics
+
+Orthopedics
+
+General Medicine
+
+Modern UI
+
+White card theme
+
+Soft shadows
+
+📁 File Structure
+├── index.html        
+└── style.css         
+
+🎯 How It Works
+
+Dashboard Sections:
+
+Header
+Displays "Hospital Dashboard"
+
+Summary Cards
+Key hospital metrics in four cards
+
+Active Appointments Table
+Patient name, doctor, time, status
+
+Recent Doctor Activity
+Doctor performance & active duty details
+
+Department Overview Grid
+Shows all key medical departments
+
+🎨 Customization
+
+You can easily adjust theme colors in style.css:
+
+:root {
+    --primary-blue: #1a73e8;
+    --card-bg: #ffffff;
+    --light-bg: #f4f7fa;
+}
+
+
+Change card colors, fonts, shadows, and spacing as needed.
+
 ## 📄 License
 
 MIT License - feel free to use for personal or commercial projects.
